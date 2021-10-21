@@ -20,4 +20,25 @@ public class DrawBoard {
         }
         return chars;
     }
+
+    public static void reloadBoard(char[][] board){
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                System.out.print(board[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+    public static boolean[][] getJudgeBoard(int num){
+        boolean[][] judgeBoard = new boolean[2 * num + 1][2 * num + 1];
+        for (int i = 0; i < judgeBoard.length; i++) {
+            for (int j = 0; j < judgeBoard[0].length; j++) {
+                if ( i%2 == j%2 ){
+                    judgeBoard[i][j] = false;
+                }
+            }
+        }
+        return judgeBoard;
+    }
 }
