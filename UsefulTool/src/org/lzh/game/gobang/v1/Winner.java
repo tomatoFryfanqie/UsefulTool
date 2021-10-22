@@ -1,11 +1,12 @@
 package org.lzh.game.gobang.v1;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Winner {
 
     private String winnerName;
-    private Date time;
+    private Long time;
     private Integer stepNum;
 
     public String getWinnerName(){
@@ -14,10 +15,10 @@ public class Winner {
     public void setWinnerName(String winnerName){
         this.winnerName = winnerName;
     }
-    public Date getTime(){
+    public Long getTime(){
         return this.time;
     }
-    public void setTime(Date time){
+    public void setTime(Long time){
         this.time = time;
     }
     public Integer getStepNum(){
@@ -27,4 +28,9 @@ public class Winner {
         this.stepNum = stepNum;
     }
 
+    public String toString(){
+        return "winnerName: "+getWinnerName()+"\n"+
+                "winnerUsedTime: "+new SimpleDateFormat("mm:ss").format(getTime())+"\n"+
+                "winnerUsedStep: "+getStepNum();
+    }
 }
