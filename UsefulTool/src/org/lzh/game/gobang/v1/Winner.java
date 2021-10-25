@@ -27,10 +27,4 @@ public class Winner {
     public void setStepNum(Integer stepNum){
         this.stepNum = stepNum;
     }
-
-    public String toString(){
-        return "winnerName: "+getWinnerName()+"\n"+
-                "winnerUsedTime: "+new SimpleDateFormat("mm:ss").format(getTime())+"\n"+
-                "winnerUsedStep: "+getStepNum();
-    }
 }

@@ -36,6 +36,6 @@ public class Gobang {
     }
 
     public static void main(String[] args) {
-        System.out.println(Gobang.startGame().toString());
+        System.out.println("WINNER: "+Gobang.startGame().getWinnerName());
     }
 }
